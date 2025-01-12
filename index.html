@@ -1,0 +1,208 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Beautiful Responsive Themes</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    /* Root Color Variables */
+    :root {
+      --primary-color: #ffffff;
+      --secondary-color: #333333;
+      --background-color: #f9f9f9;
+
+      /* Theme Colors */
+      --theme-1-primary: #f9ebea; --theme-1-secondary: #af4448; --theme-1-bg: #fef7f7;
+      --theme-2-primary: #d4e6f1; --theme-2-secondary: #1f618d; --theme-2-bg: #ecf3fa;
+      --theme-3-primary: #e8f8f5; --theme-3-secondary: #138d75; --theme-3-bg: #f1fcfa;
+      --theme-4-primary: #fcf3cf; --theme-4-secondary: #b7950b; --theme-4-bg: #fdf7e3;
+      --theme-5-primary: #f5e6e8; --theme-5-secondary: #7d3c98; --theme-5-bg: #fbf0f4;
+      --theme-6-primary: #e8daef; --theme-6-secondary: #5b2c6f; --theme-6-bg: #f3eaf7;
+      --theme-7-primary: #d5dbdb; --theme-7-secondary: #283747; --theme-7-bg: #f2f3f4;
+      --theme-8-primary: #f2d7d5; --theme-8-secondary: #922b21; --theme-8-bg: #fae5e3;
+      --theme-9-primary: #d5f5e3; --theme-9-secondary: #28b463; --theme-9-bg: #eef8f0;
+      --theme-10-primary: #fdebd0; --theme-10-secondary: #d35400; --theme-10-bg: #fef6e9;
+      --theme-11-primary: #f8c471; --theme-11-secondary: #a04000; --theme-11-bg: #fef3e3;
+      --theme-12-primary: #aab7b8; --theme-12-secondary: #424949; --theme-12-bg: #e8ecef;
+      --theme-13-primary: #eaf2f8; --theme-13-secondary: #2874a6; --theme-13-bg: #f4f9fc;
+      --theme-14-primary: #fdebd0; --theme-14-secondary: #873600; --theme-14-bg: #fcf5e9;
+      --theme-15-primary: #ebdef0; --theme-15-secondary: #6c3483; --theme-15-bg: #f9f1f8;
+      --theme-16-primary: #f5eef8; --theme-16-secondary: #7d3c98; --theme-16-bg: #fbf4fc;
+      --theme-17-primary: #f4f6f7; --theme-17-secondary: #2e4053; --theme-17-bg: #fafbfb;
+      --theme-18-primary: #fad7a0; --theme-18-secondary: #d68910; --theme-18-bg: #fcf2de;
+      --theme-19-primary: #f9e79f; --theme-19-secondary: #b7950b; --theme-19-bg: #fcf8e8;
+      --theme-20-primary: #e8daef; --theme-20-secondary: #5b2c6f; --theme-20-bg: #f3eaf7;
+      --theme-21-primary: #f5b7b1; --theme-21-secondary: #cb4335; --theme-21-bg: #fae2e0;
+      --theme-22-primary: #d6eaf8; --theme-22-secondary: #1f618d; --theme-22-bg: #edf5fc;
+      --theme-23-primary: #f9e79f; --theme-23-secondary: #b7950b; --theme-23-bg: #fcf8e7;
+      --theme-24-primary: #aed6f1; --theme-24-secondary: #3498db; --theme-24-bg: #edf4fa;
+      --theme-25-primary: #fcf3cf; --theme-25-secondary: #b7950b; --theme-25-bg: #fef7e4;
+      --theme-26-primary: #d5f5e3; --theme-26-secondary: #27ae60; --theme-26-bg: #eef8f1;
+      --theme-27-primary: #fadbd8; --theme-27-secondary: #e74c3c; --theme-27-bg: #fef0ee;
+      --theme-28-primary: #d7bde2; --theme-28-secondary: #884ea0; --theme-28-bg: #f3e9f4;
+      --theme-29-primary: #d4efdf; --theme-29-secondary: #1e8449; --theme-29-bg: #edf7f3;
+      --theme-30-primary: #f9e79f; --theme-30-secondary: #b7950b; --theme-30-bg: #fcf8e8;
+    }
+
+    /* Base Styles */
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      color: var(--secondary-color);
+      background-color: var(--background-color);
+      transition: all 0.3s;
+    }
+
+    h1, h2 {
+      margin: 0;
+    }
+
+    /* Navbar */
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
+      background-color: var(--secondary-color);
+      color: var(--primary-color);
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 15px;
+      margin: 0;
+    }
+
+    nav ul li {
+      padding: 5px 10px;
+    }
+
+    nav ul li a {
+      color: var(--primary-color);
+      text-decoration: none;
+    }
+
+    /* Hero Section */
+    .hero {
+      text-align: center;
+      padding: 50px;
+      background-color: var(--primary-color);
+    }
+
+    /* Cards Section */
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .card {
+      background: var(--primary-color);
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .card i {
+      font-size: 3rem;
+      color: var(--secondary-color);
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: var(--secondary-color);
+      color: var(--primary-color);
+    }
+
+    /* Theme Selector */
+    .theme-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      margin: 20px 0;
+    }
+
+    .theme-btn {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      border: none;
+      cursor: pointer;
+      transition: transform 0.3s;
+    }
+
+    .theme-btn:hover {
+      transform: scale(1.1);
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav>
+    <div>Responsive Themes</div>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero Section -->
+  <div class="hero">
+    <h1>Beautiful Themes</h1>
+    <p>Switch seamlessly between modern, attractive themes!</p>
+  </div>
+
+  <!-- Card Section -->
+  <div class="cards">
+    <div class="card">
+      <i class="fas fa-palette"></i>
+      <h2>Design</h2>
+    </div>
+    <div class="card">
+      <i class="fas fa-mobile-alt"></i>
+      <h2>Responsive</h2>
+    </div>
+    <div class="card">
+      <i class="fas fa-code"></i>
+      <h2>Customizable</h2>
+    </div>
+  </div>
+
+  <!-- Theme Buttons -->
+  <div class="theme-buttons">
+    <script>
+      for (let i = 1; i <= 30; i++) {
+        document.write(`<button class="theme-btn" style="background-color: var(--theme-${i}-primary);" onclick="applyTheme('theme-${i}')"></button>`);
+      }
+    </script>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    &copy; 2025 All Rights Reserved
+  </footer>
+
+  <script>
+    const applyTheme = (theme) => {
+      const root = document.documentElement;
+      root.style.setProperty('--primary-color', getComputedStyle(root).getPropertyValue(`--${theme}-primary`));
+      root.style.setProperty('--secondary-color', getComputedStyle(root).getPropertyValue(`--${theme}-secondary`));
+      root.style.setProperty('--background-color', getComputedStyle(root).getPropertyValue(`--${theme}-bg`));
+    };
+  </script>
+</body>
+</html>
